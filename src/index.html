@@ -108,6 +108,10 @@
                     "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
                     "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
                     "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}]
+            },
+            "screens": {
+            "celular": {"max": "538px"},
+            "3xl": "1600px"
             }
           },
         },
@@ -214,8 +218,21 @@
 <span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
                     Manipulação Especializada Vital Pet
                 </div>
-<h1 class="font-display-lg text-display-lg text-primary leading-[1.1]">A Saúde do seu Pet em Cada Detalhe: <span class="text-gradient">Manipulação de Alta Precisão e Cuidado.</span></h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Transformamos tratamentos complexos em momentos de carinho com fórmulas personalizadas, sabores irresistíveis e a dosagem exata que seu companheiro merece.</p>
+<!-- Container opcional para controlar o espaçamento e alinhamento no mobile -->
+<div class="space-y-4 md:space-y-6">
+
+  <!-- H1: Começa menor no mobile, cresce no tablet e assume o tamanho máximo no desktop -->
+  <h1 class="font-display-lg text-3xl font-bold text-primary leading-[1.2] sm:text-4xl md:text-5xl lg:text-display-lg lg:leading-[1.1]">
+    A Saúde do seu Pet em Cada Detalhe: 
+    <span class="text-gradient block sm:inline">Manipulação de Alta Precisão e Cuidado.</span>
+  </h1>
+
+  <!-- P: Ajustado o tamanho da fonte para mobile e adicionado controle de margem se for centralizado -->
+  <p class="font-body-lg text-base text-on-surface-variant max-w-xl md:text-body-lg">
+    Transformamos tratamentos complexos em momentos de carinho com fórmulas personalizadas, sabores irresistíveis e a dosagem exata que seu companheiro merece.
+  </p>
+
+</div>
 <div class="flex flex-col sm:flex-row gap-3 pt-4">
   <a class="bg-[#0D9488] text-white px-6 py-3 rounded-md text-sm font-extrabold flex items-center justify-center gap-2 shadow-[0_4px_12px_rgba(37,211,102,0.3)] hover:scale-105 transition-all duration-300" href="https://wa.me/yournumber">
      Pedir Orçamento
@@ -230,14 +247,17 @@
 <img alt="Golden Retriever em clínica" class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrviKUhcG1pRmj2bYgayw7yH7Gm_arjaImqGJDwuVDl3XtIHecpk90hw81Fk0g0uwLDhK678TPlh3sjDpAkemE1E0i5glU7nJIIpKVYEvpHkllksRzQDgb9Xud2qhOYpS-Kz8lAinpUZsy6xJAu1p0t1ny23ku3AydryjYkJrZdUyF7BHF4tXjywduUQ_0SD0Wqy9KblBEmzO4JWuAgjINv55_qGO_4VdJY6tSEnCWYSdt4MA8E8J_kHO2pcbFd4cBe8GsxRKBCWn3">
 </div>
 <!-- Floating Info Card -->
-<div class="absolute -bottom-10 -left-10 glass-card p-8 rounded-2xl shadow-2xl flex items-center gap-5 border border-white/40">
-<div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">pets</span>
-</div>
-<div>
-<p class="text-primary font-extrabold text-3xl">15.000+</p>
-<p class="text-on-surface-variant font-semibold text-label-md">Pets Atendidos com Amor</p>
-</div>
+<div class="relative md:absolute md:-bottom-10 md:-left-10 mx-auto md:mx-0 max-w-sm glass-card p-6 md:p-8 rounded-2xl shadow-2xl flex items-center gap-5 border border-white/40 bg-white/70 backdrop-blur-md">
+  
+  <div class="w-12 h-12 md:w-16 md:h-16 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+    <span class="material-symbols-outlined text-secondary text-3xl md:text-4xl" style="font-variation-settings: 'FILL' 1;">pets</span>
+  </div>
+  
+  <div class="text-left">
+    <p class="text-primary font-extrabold text-2xl md:text-3xl leading-none mb-1">15.000+</p>
+    <p class="text-on-surface-variant font-semibold text-sm md:text-label-md leading-tight">Pets Atendidos com Amor</p>
+  </div>
+
 </div>
 </div>
 </div>
@@ -346,69 +366,77 @@
 </section>
 <!-- Scientific Rigor Section -->
 <section class="py-section-gap bg-surface-ice overflow-hidden" id="solucoes">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="grid lg:grid-cols-2 gap-24 items-center">
-<div class="relative">
-<div class="grid grid-cols-2 gap-6">
-<div class="space-y-6 pt-12">
-<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-<img alt="Laboratório Farmacêutico" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGQmLWAlIXv6UnR35nGRKdjnnL6IILrzqx85EbcZTserjeu1-70d4qoMNi1pYjI2FIs-7Jowe4NalgEjGPbFJ0XSrC_xXo9sxjGZgwyKmq8SDPPiu5ABureAO1ca4GODQopcGZQL7LvPUEPOqmfFm8xt3tH2l32u8uHN9H7aU1b7EJPg_95c_7QrZK8uhofhoBd7bGapLOQXdn55UzJQU3_mCnddz0noT5cuGNDGRbPEzEjxIVHm3y_iJedI0CAtli5Tf-Q7_1vay6">
-</div>
-<div class="bg-secondary p-8 rounded-3xl text-white">
-<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">science</span>
-<h4 class="font-bold text-xl">Precisão Absoluta</h4>
-<p class="text-sm opacity-80 mt-2">Tecnologia de pesagem eletrônica monitorada.</p>
-</div>
-</div>
-<div class="space-y-6">
-<div class="bg-primary p-8 rounded-3xl text-white">
-<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">verified</span>
-<h4 class="font-bold text-xl">Certificação Vital Pet</h4>
-<p class="text-sm opacity-80 mt-2">Seguimos os mais rigorosos protocolos internacionais.</p>
-</div>
-<div class="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
-<img alt="Biscoitos Medicinais" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxO4pJEbIxAi1K6wUyP6Ffpzx8VGqRzQeDnpgBn8TcAg7J0_qfkApS4yUKshsrb4QzYmO0CFmWNhvtuafJSoBNqapscbybxZ1C959gxFFQxAVw4C-OA2yubpYAN20JxvRjpI4qxiSOT2TVckULAaneLOV29ycIE89q_B4VBdQmOolmHPnsqj_AuCjhOesI_UJqiMxRmUcXvFklELAexAHDYJCXMEF4D5fsGVbfGR4qFoJdFty4zW57Kc50dhgx2CgRifeEqSQiid5K">
-</div>
-</div>
-</div>
-</div>
-<div class="space-y-stack-lg">
-<h2 class="font-headline-lg text-headline-lg text-primary">A Ciência do Bem-Estar: Rigor Farmacêutico Vital Pet</h2>
-<p class="text-on-surface-variant text-body-lg">
-                        Nossa farmácia não apenas manipula fórmulas; nós criamos soluções personalizadas que consideram a fisiologia única de cada espécie.
-                    </p>
-<div class="space-y-8">
-<div class="flex gap-6">
-<div class="flex-shrink-0 w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined text-3xl">biotech</span>
-</div>
-<div>
-<h4 class="font-bold text-xl text-primary mb-2">Insumos de Pureza Certificada</h4>
-<p class="text-on-surface-variant">Trabalhamos apenas com fornecedores auditados e matérias-primas de grau farmacêutico humano adaptadas para o uso pet.</p>
-</div>
-</div>
-<div class="flex gap-6">
-<div class="flex-shrink-0 w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined text-3xl">scale</span>
-</div>
-<div>
-<h4 class="font-bold text-xl text-primary mb-2">Individualização Terapêutica</h4>
-<p class="text-on-surface-variant">Ajustamos concentrações específicas para animais de 500g a 80kg, garantindo a margem de segurança e eficácia.</p>
-</div>
-</div>
-<div class="flex gap-6">
-<div class="flex-shrink-0 w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-secondary">
-<span class="material-symbols-outlined text-3xl">qr_code_2</span>
-</div>
-<div>
-<h4 class="font-bold text-xl text-primary mb-2">Rastreabilidade Total</h4>
-<p class="text-on-surface-variant">Cada medicamento possui um sistema de rastreamento por QR Code que detalha todo o processo de manipulação.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="max-w-container-max mx-auto px-margin-desktop">
+    
+    <div class="grid lg:grid-cols-2 gap-24 items-center">
+      
+      <div class="relative">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <div class="bg-secondary p-8 rounded-3xl text-white">
+            <span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">science</span>
+            <h4 class="font-bold text-xl">Precisão Absoluta</h4>
+            <p class="text-sm opacity-80 mt-2">Tecnologia de pesagem eletrônica monitorada.</p>
+          </div>
+          <div class="space-y-6 sm:pt-12">
+            <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+              <img alt="Laboratório Farmacêutico" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGQmLWAlIXv6UnR35nGRKdjnnL6IILrzqx85EbcZTserjeu1-70d4qoMNi1pYjI2FIs-7Jowe4NalgEjGPbFJ0XSrC_xXo9sxjGZgwyKmq8SDPPiu5ABureAO1ca4GODQopcGZQL7LvPUEPOqmfFm8xt3tH2l32u8uHN9H7aU1b7EJPg_95c_7QrZK8uhofhoBd7bGapLOQXdn55UzJQU3_mCnddz0noT5cuGNDGRbPEzEjxIVHm3y_iJedI0CAtli5Tf-Q7_1vay6">
+            </div>
+          </div>
+          
+          <div class="space-y-6">
+            <div class="bg-primary p-8 rounded-3xl text-white">
+              <span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">verified</span>
+              <h4 class="font-bold text-xl">Certificação Vital Pet</h4>
+              <p class="text-sm opacity-80 mt-2">Seguimos os mais rigorosos protocolos internacionais.</p>
+            </div>
+            <div class="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+              <img alt="Biscoitos Medicinais" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxO4pJEbIxAi1K6wUyP6Ffpzx8VGqRzQeDnpgBn8TcAg7J0_qfkApS4yUKshsrb4QzYmO0CFmWNhvtuafJSoBNqapscbybxZ1C959gxFFQxAVw4C-OA2yubpYAN20JxvRjpI4qxiSOT2TVckULAaneLOV29ycIE89q_B4VBdQmOolmHPnsqj_AuCjhOesI_UJqiMxRmUcXvFklELAexAHDYJCXMEF4D5fsGVbfGR4qFoJdFty4zW57Kc50dhgx2CgRifeEqSQiid5K">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="space-y-stack-lg">
+        <h2 class="font-headline-lg text-headline-lg text-primary">A Ciência do Bem-Estar: Rigor Farmacêutico Vital Pet</h2>
+        <p class="text-on-surface-variant text-body-lg">
+          Nossa farmácia não apenas manipula fórmulas; nós criamos soluções personalizadas que consideram a fisiologia única de cada espécie.
+        </p>
+        
+        <div class="space-y-8">
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-secondary">
+              <span class="material-symbols-outlined text-3xl">biotech</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-xl text-primary mb-2">Insumos de Pureza Certificada</h4>
+              <p class="text-on-surface-variant">Trabalhamos apenas com fornecedores auditados e matérias-primas de grau farmacêutico humano adaptadas para o uso pet.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-secondary">
+              <span class="material-symbols-outlined text-3xl">scale</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-xl text-primary mb-2">Individualização Terapêutica</h4>
+              <p class="text-on-surface-variant">Ajustamos concentrações específicas para animais de 500g a 80kg, garantindo a margem de segurança e eficácia.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-secondary">
+              <span class="material-symbols-outlined text-3xl">qr_code_2</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-xl text-primary mb-2">Rastreabilidade Total</h4>
+              <p class="text-on-surface-variant">Cada medicamento possui um sistema de rastreamento por QR Code que detalha todo o processo de manipulação.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </section>
 <!-- How it Works -->
 <section class="py-section-gap bg-white" id="como-funciona">
@@ -524,8 +552,21 @@
 <div class="absolute top-0 right-0 w-[40%] h-full bg-gradient-to-l from-secondary/20 to-transparent"></div>
 <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 translate-y-1/2 blur-3xl"></div>
 <div class="relative z-10 max-w-3xl mx-auto space-y-8">
-<h2 class="font-display-lg text-display-lg text-white leading-tight">Pronto para transformar o cuidado com seu pet?</h2>
-<p class="text-white/70 text-body-lg">Junte-se a milhares de tutores que escolheram a paz de espírito e a saúde para seus companheiros através da Vital Pet Compounding.</p>
+<!-- Container para garantir espaçamento e alinhamento corretos em qualquer tela -->
+<!-- Adicionado mx-auto para manter a div inteira centralizada na página se necessário, 
+     e items-center md:items-start para alinhar os textos internos perfeitamente -->
+<div class="flex flex-col items-center md:items-start gap-4 p-6 md:p-12 text-center md:text-left max-w-3xl mx-auto">
+
+  <h2 class="font-display-lg text-2xl font-bold text-white leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
+    Pronto para transformar o cuidado com seu pet?
+  </h2>
+  
+  <!-- Adicionado mx-auto md:mx-0 para que o parágrafo fique centralizado no celular e encoste na esquerda no PC -->
+  <p class="text-white/70 text-sm sm:text-base md:text-lg max-w-xl mx-auto md:mx-0">
+    Junte-se a milhares de tutores que escolheram a paz de espírito e a saúde para seus companheiros através da Vital Pet Compounding.
+  </p>
+
+</div>
 <!-- <div class="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
 <a class="w-full sm:w-auto bg-secondary text-white px-12 py-6 rounded-full font-extrabold flex items-center justify-center gap-3 shadow-xl hover:shadow-secondary/40 btn-hover" href="https://wa.me/yournumber">
 <span class="material-symbols-outlined">send</span>
