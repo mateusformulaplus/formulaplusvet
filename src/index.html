@@ -1,0 +1,618 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Formulapluspet | Farmácia de Manipulação para Pet</title>
+<meta content="Especialistas em farmácia de manipulação para pet. Transformamos fórmulas veterinárias em petiscos saborosos com rigor científico e medicamento personalizado para pet." name="description">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link rel="shortcut icon" href="./public/logo_vet.png" type="image/x-icon">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#1e293b",
+                    "on-secondary-container": "#00714e",
+                    "surface-dim": "#d2dbe8",
+                    "on-surface": "#0f172a",
+                    "primary-fixed": "#d6e3ff",
+                    "warning-orange": "#FB923C",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#aac7fe",
+                    "outline-variant": "#e2e8f0",
+                    "on-background": "#0f172a",
+                    "on-secondary-fixed": "#002114",
+                    "error-container": "#ffdad6",
+                    "primary": "#001532",
+                    "surface-ice": "#F8FAFC",
+                    "surface-tint": "#415f8f",
+                    "surface-container-low": "#f1f5f9",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#68fcbf",
+                    "success-teal": "#0D9488",
+                    "on-error": "#ffffff",
+                    "primary-container": "#012957",
+                    "on-primary-fixed-variant": "#284776",
+                    "secondary-container": "#64f9bc",
+                    "surface-bright": "#ffffff",
+                    "surface-muted": "#f8fafc",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#ec6a07",
+                    "on-tertiary-fixed-variant": "#783200",
+                    "tertiary-fixed": "#ffdbca",
+                    "primary-fixed-dim": "#aac7fe",
+                    "on-tertiary-fixed": "#341100",
+                    "surface-variant": "#f1f5f9",
+                    "surface-container": "#f8fafc",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#f1f5f9",
+                    "tertiary": "#2a0d00",
+                    "background": "#ffffff",
+                    "on-secondary-fixed-variant": "#005137",
+                    "tertiary-fixed-dim": "#ffb690",
+                    "on-primary-container": "#7591c5",
+                    "inverse-on-surface": "#e8f1ff",
+                    "surface-container-highest": "#e2e8f0",
+                    "outline": "#94a3b8",
+                    "on-secondary": "#ffffff",
+                    "surface": "#ffffff",
+                    "on-surface-variant": "#475569",
+                    "secondary-fixed-dim": "#45dfa4",
+                    "tertiary-container": "#4a1c00",
+                    "on-primary-fixed": "#001b3e",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#0D9488"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "0.75rem",
+                    "xl": "1.25rem",
+                    "2xl": "2rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "gutter": "32px",
+                    "section-gap": "100px",
+                    "stack-md": "20px",
+                    "margin-desktop": "60px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px",
+                    "stack-lg": "40px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                    "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                    "headline-lg-mobile": ["Manrope", "sans-serif"],
+                    "headline-md": ["Manrope", "sans-serif"],
+                    "display-lg": ["Manrope", "sans-serif"],
+                    "label-md": ["Plus Jakarta Sans", "sans-serif"],
+                    "caption": ["Plus Jakarta Sans", "sans-serif"],
+                    "headline-lg": ["Manrope", "sans-serif"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .btn-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .btn-hover:hover { transform: translateY(-2px); filter: brightness(110%); }
+        .btn-hover:active { transform: translateY(0) scale(0.98); }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #001532 0%, #0D9488 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-curve {
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- HEADER MODIFICADO (Com ID no botão e estrutura pronta) -->
+<header class="bg-[#012957] backdrop-blur-md border-b border-slate-100 fixed top-0 w-full z-50">
+  <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+    <div class="flex items-center gap-stack-md">
+      <img alt="Formulapluspet Logo" class="h-[110px] w-auto mt-5" src="../public/logo_vet.png">
+    </div>
+    
+    <!-- Menu Desktop -->
+    <nav class="hidden lg:flex gap-gutter">
+      <a class="text-on-surface/70 font-semibold hover:text-[#02A246] transition-colors duration-200 text-label-md text-white" href="#solucoes">Soluções</a>
+      <a class="text-on-surface/70 font-semibold hover:text-[#02A246] transition-colors duration-200 text-label-md text-white" href="#como-funciona">Como Funciona</a>
+      <a class="text-on-surface/70 font-semibold hover:text-[#02A246] transition-colors duration-200 text-label-md text-white" href="#formas-farmaceuticas">Formas</a>
+      <a class="text-on-surface/70 font-semibold hover:text-[#02A246] transition-colors duration-200 text-label-md text-white" href="#faq">FAQ</a>
+    </nav>
+
+    <div class="flex items-center gap-stack-md">
+      <a class="hidden md:flex bg-primary text-white px-8 py-3 rounded-full font-bold text-label-md btn-hover shadow-lg shadow-primary/20" href="https://wa.me/yournumber">
+        Pedir Orçamento
+      </a>
+      <!-- ID adicionado ao botão hambúrguer -->
+      <button id="menu-btn" class="lg:hidden material-symbols-outlined text-white text-3xl">menu</button>
+    </div>
+  </div>
+
+  <!-- MENU MOBILE (Inserido aqui, inicialmente escondido com 'hidden') -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-[#012957] border-t border-slate-700 w-full px-margin-desktop py-6 absolute top-20 left-0 space-y-4 shadow-xl">
+    <a class="block text-white font-semibold hover:text-[#02A246] transition-colors" href="#solucoes">Soluções</a>
+    <a class="block text-white font-semibold hover:text-[#02A246] transition-colors" href="#como-funciona">Como Funciona</a>
+    <a class="block text-white font-semibold hover:text-[#02A246] transition-colors" href="#formas-farmaceuticas">Formas</a>
+    <a class="block text-white font-semibold hover:text-[#02A246] transition-colors" href="#faq">FAQ</a>
+    <a class="block md:hidden bg-secondary text-white text-center px-6 py-3 rounded-md font-bold text-sm" href="https://wa.me/yournumber">Pedir Orçamento</a>
+  </div>
+</header>
+
+<!-- ... Resto do seu código (main, sections, etc) ... -->
+
+<!-- SCRIPT JS (Cole isto logo ANTES de fechar a tag </body>) -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+
+  menuBtn.addEventListener('click', () => {
+    // Alterna a classe hidden para mostrar/esconder o menu
+    mobileMenu.classList.toggle('hidden');
+    
+    // Opcional: muda o ícone de 'menu' para 'close' (X) ao abrir
+    if (mobileMenu.classList.contains('hidden')) {
+      menuBtn.textContent = 'menu';
+    } else {
+      menuBtn.textContent = 'close';
+    }
+  });
+
+  // Fecha o menu ao clicar em qualquer link dele
+  const menuLinks = mobileMenu.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.textContent = 'menu';
+    });
+  });
+</script>
+</body>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-surface-container-low via-white to-surface-ice overflow-hidden py-section-gap lg:pt-32 lg:pb-40">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-20 right-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[80px]"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+<div class="space-y-stack-lg gap-8">
+<div class="inline-flex items-center gap-2 bg-primary/5 border border-primary/10 text-primary px-5 py-2 rounded-full font-bold text-label-md uppercase tracking-wider">
+<span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
+                    Manipulação Especializada Vital Pet
+                </div>
+<h1 class="font-display-lg text-display-lg text-primary leading-[1.1]">A Saúde do seu Pet em Cada Detalhe: <span class="text-gradient">Manipulação de Alta Precisão e Cuidado.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Transformamos tratamentos complexos em momentos de carinho com fórmulas personalizadas, sabores irresistíveis e a dosagem exata que seu companheiro merece.</p>
+<div class="flex flex-col sm:flex-row gap-3 pt-4">
+  <a class="bg-[#0D9488] text-white px-6 py-3 rounded-md text-sm font-extrabold flex items-center justify-center gap-2 shadow-[0_4px_12px_rgba(37,211,102,0.3)] hover:scale-105 transition-all duration-300" href="https://wa.me/yournumber">
+     Pedir Orçamento
+  </a>
+  <a class="border-2 border-primary/10 text-primary/80 px-6 py-3 rounded-md text-sm font-bold flex items-center justify-center hover:bg-primary/5 hover:border-primary/30 transition-all duration-300" href="#solucoes">
+    Conhecer Soluções
+  </a>
+</div>
+</div>
+<div class="relative">
+<div class="relative rounded-3xl overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,21,50,0.2)] border-8 border-white">
+<img alt="Golden Retriever em clínica" class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrviKUhcG1pRmj2bYgayw7yH7Gm_arjaImqGJDwuVDl3XtIHecpk90hw81Fk0g0uwLDhK678TPlh3sjDpAkemE1E0i5glU7nJIIpKVYEvpHkllksRzQDgb9Xud2qhOYpS-Kz8lAinpUZsy6xJAu1p0t1ny23ku3AydryjYkJrZdUyF7BHF4tXjywduUQ_0SD0Wqy9KblBEmzO4JWuAgjINv55_qGO_4VdJY6tSEnCWYSdt4MA8E8J_kHO2pcbFd4cBe8GsxRKBCWn3">
+</div>
+<!-- Floating Info Card -->
+<div class="absolute -bottom-10 -left-10 glass-card p-8 rounded-2xl shadow-2xl flex items-center gap-5 border border-white/40">
+<div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div>
+<p class="text-primary font-extrabold text-3xl">15.000+</p>
+<p class="text-on-surface-variant font-semibold text-label-md">Pets Atendidos com Amor</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Agitation Section -->
+<section class="py-section-gap bg-white relative">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Tratar seu pet não precisa ser um sacrifício</h2>
+<p class="text-on-surface-variant text-body-lg">Entendemos os desafios de tutores que enfrentam dificuldades na hora da medicação. Nossa missão é humanizar esse momento.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Pain Cards -->
+<div class="group bg-surface-container p-10 rounded-2xl border border-transparent hover:border-secondary/20 hover:bg-white hover:shadow-xl transition-all duration-500">
+<div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">medication</span>
+</div>
+<h3 class="font-bold text-xl text-primary mb-4 leading-snug">Pílulas e Comprimidos Impossíveis?</h3>
+<p class="text-on-surface-variant">Chega de esconder remédios em alimentos ou forçar a ingestão de pílulas gigantes.</p>
+</div>
+<div class="group bg-surface-container p-10 rounded-2xl border border-transparent hover:border-secondary/20 hover:bg-white hover:shadow-xl transition-all duration-500">
+<div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">sentiment_dissatisfied</span>
+</div>
+<h3 class="font-bold text-xl text-primary mb-4 leading-snug">Estresse e Traumas Constantes</h3>
+<p class="text-on-surface-variant">Elimine a batalha diária que desgasta o seu vínculo e a confiança do seu pet.</p>
+</div>
+<div class="group bg-surface-container p-10 rounded-2xl border border-transparent hover:border-secondary/20 hover:bg-white hover:shadow-xl transition-all duration-500">
+<div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">balance</span>
+</div>
+<h3 class="font-bold text-xl text-primary mb-4 leading-snug">Dosagem Incorreta em Frações</h3>
+<p class="text-on-surface-variant">Cortar comprimidos humanos gera imprecisão. Nós entregamos a miligrama exata.</p>
+</div>
+<div class="group bg-surface-container p-10 rounded-2xl border border-transparent hover:border-secondary/20 hover:bg-white hover:shadow-xl transition-all duration-500">
+<div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+</div>
+<h3 class="font-bold text-xl text-primary mb-4 leading-snug">Falta de Rigor Técnico</h3>
+<p class="text-on-surface-variant">Insumos certificados e farmacêuticos especializados garantem a eficácia total.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pharmaceutical Forms Showcase (Replacement of Testimonials) -->
+<section class="py-section-gap bg-primary text-white overflow-hidden" id="formas-farmaceuticas">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20">
+<div class="max-w-2xl">
+<span class="text-secondary font-bold uppercase tracking-widest text-sm mb-4 block">Alta Performance Farmacêutica</span>
+<h2 class="font-headline-lg text-headline-lg leading-tight">Soluções em Formas Farmacêuticas Exclusivas</h2>
+</div>
+<p class="text-white/70 text-body-lg max-w-sm">Variedade e sabor para garantir que o seu pet aceite o tratamento com alegria.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Form 1 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group">
+<div class="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-secondary/40 transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl">cookie</span>
+</div>
+<h4 class="text-2xl font-bold mb-4">Biscoitos Funcionais</h4>
+<p class="text-white/60 mb-6">Formatos crocantes e saborizados (carne, frango, bacon) que funcionam como petisco e remédio ao mesmo tempo.</p>
+<ul class="space-y-2 text-sm font-semibold text-secondary">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> 100% Palatáveis</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> Formatos Lúdicos</li>
+</ul>
+</div>
+<!-- Form 2 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group">
+<div class="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-secondary/40 transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl">clean_hands</span>
+</div>
+<h4 class="text-2xl font-bold mb-4">Géis Transdérmicos</h4>
+<p class="text-white/60 mb-6">Absorção rápida através da pele (geralmente na orelha). Ideal para animais agressivos ou com vômitos.</p>
+<ul class="space-y-2 text-sm font-semibold text-secondary">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> Sem Ingestão Oral</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> Stress Free</li>
+</ul>
+</div>
+<!-- Form 3 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group">
+<div class="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-secondary/40 transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl">fluid_med</span>
+</div>
+<h4 class="text-2xl font-bold mb-4">Xaropes Gourmet</h4>
+<p class="text-white/60 mb-6">Suspensões orais com sabores irresistíveis de peixe, baunilha ou morango para fácil aceitação.</p>
+<ul class="space-y-2 text-sm font-semibold text-secondary">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> Seringas Dosadoras</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> Sabores Exclusivos</li>
+</ul>
+</div>
+<!-- Form 4 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all group">
+<div class="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-secondary/40 transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl">medication_liquid</span>
+</div>
+<h4 class="text-2xl font-bold mb-4">Cápsulas Mini</h4>
+<p class="text-white/60 mb-6">Tamanho reduzido para facilitar a ingestão, com opção de cápsulas gelatinosas coloridas ou transparentes.</p>
+<ul class="space-y-2 text-sm font-semibold text-secondary">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> Ultra Pequenas</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> Odor Neutralizado</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Scientific Rigor Section -->
+<section class="py-section-gap bg-surface-ice overflow-hidden" id="solucoes">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-6 pt-12">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Laboratório Farmacêutico" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGQmLWAlIXv6UnR35nGRKdjnnL6IILrzqx85EbcZTserjeu1-70d4qoMNi1pYjI2FIs-7Jowe4NalgEjGPbFJ0XSrC_xXo9sxjGZgwyKmq8SDPPiu5ABureAO1ca4GODQopcGZQL7LvPUEPOqmfFm8xt3tH2l32u8uHN9H7aU1b7EJPg_95c_7QrZK8uhofhoBd7bGapLOQXdn55UzJQU3_mCnddz0noT5cuGNDGRbPEzEjxIVHm3y_iJedI0CAtli5Tf-Q7_1vay6">
+</div>
+<div class="bg-secondary p-8 rounded-3xl text-white">
+<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">science</span>
+<h4 class="font-bold text-xl">Precisão Absoluta</h4>
+<p class="text-sm opacity-80 mt-2">Tecnologia de pesagem eletrônica monitorada.</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="bg-primary p-8 rounded-3xl text-white">
+<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">verified</span>
+<h4 class="font-bold text-xl">Certificação Vital Pet</h4>
+<p class="text-sm opacity-80 mt-2">Seguimos os mais rigorosos protocolos internacionais.</p>
+</div>
+<div class="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Biscoitos Medicinais" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxO4pJEbIxAi1K6wUyP6Ffpzx8VGqRzQeDnpgBn8TcAg7J0_qfkApS4yUKshsrb4QzYmO0CFmWNhvtuafJSoBNqapscbybxZ1C959gxFFQxAVw4C-OA2yubpYAN20JxvRjpI4qxiSOT2TVckULAaneLOV29ycIE89q_B4VBdQmOolmHPnsqj_AuCjhOesI_UJqiMxRmUcXvFklELAexAHDYJCXMEF4D5fsGVbfGR4qFoJdFty4zW57Kc50dhgx2CgRifeEqSQiid5K">
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary">A Ciência do Bem-Estar: Rigor Farmacêutico Vital Pet</h2>
+<p class="text-on-surface-variant text-body-lg">
+                        Nossa farmácia não apenas manipula fórmulas; nós criamos soluções personalizadas que consideram a fisiologia única de cada espécie.
+                    </p>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">biotech</span>
+</div>
+<div>
+<h4 class="font-bold text-xl text-primary mb-2">Insumos de Pureza Certificada</h4>
+<p class="text-on-surface-variant">Trabalhamos apenas com fornecedores auditados e matérias-primas de grau farmacêutico humano adaptadas para o uso pet.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">scale</span>
+</div>
+<div>
+<h4 class="font-bold text-xl text-primary mb-2">Individualização Terapêutica</h4>
+<p class="text-on-surface-variant">Ajustamos concentrações específicas para animais de 500g a 80kg, garantindo a margem de segurança e eficácia.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">qr_code_2</span>
+</div>
+<div>
+<h4 class="font-bold text-xl text-primary mb-2">Rastreabilidade Total</h4>
+<p class="text-on-surface-variant">Cada medicamento possui um sistema de rastreamento por QR Code que detalha todo o processo de manipulação.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works -->
+<section class="py-section-gap bg-white" id="como-funciona">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-primary">Simples, Rápido e Seguro</h2>
+<div class="w-24 h-1 bg-secondary mx-auto mt-6 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center group">
+<div class="relative w-24 h-24 mx-auto mb-8">
+<div class="absolute inset-0 bg-secondary/10 rounded-3xl rotate-12 group-hover:rotate-6 transition-transform"></div>
+<div class="relative w-24 h-24 bg-white shadow-lg rounded-3xl flex items-center justify-center border border-slate-100">
+<span class="text-primary font-extrabold text-3xl">01</span>
+</div>
+</div>
+<h4 class="font-bold text-xl text-primary mb-4">Envie a Receita</h4>
+<p class="text-on-surface-variant px-6">Fotografe a prescrição do seu veterinário e envie pelo WhatsApp. Nosso time responde em minutos.</p>
+</div>
+<div class="text-center group">
+<div class="relative w-24 h-24 mx-auto mb-8">
+<div class="absolute inset-0 bg-primary/10 rounded-3xl rotate-12 group-hover:rotate-6 transition-transform"></div>
+<div class="relative w-24 h-24 bg-white shadow-lg rounded-3xl flex items-center justify-center border border-slate-100">
+<span class="text-primary font-extrabold text-3xl">02</span>
+</div>
+</div>
+<h4 class="font-bold text-xl text-primary mb-4">Manipulação Magistral</h4>
+<p class="text-on-surface-variant px-6">Escolhemos a melhor forma farmacêutica e preparamos a fórmula com precisão científica absoluta.</p>
+</div>
+<div class="text-center group">
+<div class="relative w-24 h-24 mx-auto mb-8">
+<div class="absolute inset-0 bg-secondary/10 rounded-3xl rotate-12 group-hover:rotate-6 transition-transform"></div>
+<div class="relative w-24 h-24 bg-white shadow-lg rounded-3xl flex items-center justify-center border border-slate-100">
+<span class="text-primary font-extrabold text-3xl">03</span>
+</div>
+</div>
+<h4 class="font-bold text-xl text-primary mb-4">Entrega em Casa</h4>
+<p class="text-on-surface-variant px-6">Receba o tratamento pronto para uso no conforto da sua casa, com embalagens seguras e informativas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Expanded FAQ Section -->
+<section class="py-section-gap bg-surface-container" id="faq">
+<div class="max-w-4xl mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary">Dúvidas Frequentes</h2>
+<p class="text-on-surface-variant mt-4">Tudo o que você precisa saber sobre manipulação veterinária.</p>
+</div>
+<div class="space-y-4">
+<details class="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-primary hover:bg-slate-50 transition-colors">
+                        O que é manipulação magistral pet?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-secondary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                        É a preparação personalizada de medicamentos seguindo a prescrição exata do veterinário. Isso permite ajustar a dose conforme o peso do animal e escolher formatos que facilitem a administração, como xaropes, biscoitos ou géis transdérmicos.
+                    </div>
+</details>
+<details class="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-primary hover:bg-slate-50 transition-colors">
+                        Quais são os sabores disponíveis?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-secondary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                        Temos uma ampla gama: Carne, Frango, Bacon e Fígado para cães; Peixe, Salmão e Atum para gatos; e opções doces como Morango, Baunilha e Doce de Leite para xaropes e suspensões.
+                    </div>
+</details>
+<details class="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-primary hover:bg-slate-50 transition-colors">
+                        Como é feita a entrega dos medicamentos?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-secondary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                        Entregamos via portador especializado (motoboy) para garantir a integridade da fórmula. Para outras regiões, utilizamos logística expressa com embalagens térmicas quando necessário.
+                    </div>
+</details>
+<details class="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-primary hover:bg-slate-50 transition-colors">
+                        A manipulação veterinária é segura para todos os pets?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-secondary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                        Sim! Atendemos desde cães e gatos até animais exóticos (aves, répteis e roedores), sempre respeitando as particularidades metabólicas de cada espécie e as restrições indicadas pelo veterinário.
+                    </div>
+</details>
+<details class="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-primary hover:bg-slate-50 transition-colors">
+                        Posso manipular medicamentos para doenças crônicas?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-secondary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                        Com certeza. A manipulação é excelente para tratamentos de longa duração (cardiopatias, problemas renais ou endócrinos), pois facilita a rotina e garante que o animal receba a medicação corretamente todos os dias sem estresse.
+                    </div>
+</details>
+<details class="group bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-bold text-primary hover:bg-slate-50 transition-colors">
+                        Preciso de receita médica?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-secondary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+                        Sim. Como farmácia de manipulação regulamentada, exigimos a receita do médico veterinário para garantir que o tratamento seja realizado sob medida e com total segurança.
+                    </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-section-gap relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-primary rounded-[3rem] p-16 md:p-24 text-center relative overflow-hidden shadow-2xl">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-[40%] h-full bg-gradient-to-l from-secondary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 translate-y-1/2 blur-3xl"></div>
+<div class="relative z-10 max-w-3xl mx-auto space-y-8">
+<h2 class="font-display-lg text-display-lg text-white leading-tight">Pronto para transformar o cuidado com seu pet?</h2>
+<p class="text-white/70 text-body-lg">Junte-se a milhares de tutores que escolheram a paz de espírito e a saúde para seus companheiros através da Vital Pet Compounding.</p>
+<!-- <div class="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+<a class="w-full sm:w-auto bg-secondary text-white px-12 py-6 rounded-full font-extrabold flex items-center justify-center gap-3 shadow-xl hover:shadow-secondary/40 btn-hover" href="https://wa.me/yournumber">
+<span class="material-symbols-outlined">send</span>
+                            Enviar Receita Agora
+                        </a>
+<a class="w-full sm:w-auto bg-white/10 text-white border border-white/20 px-12 py-6 rounded-full font-extrabold flex items-center justify-center gap-3 hover:bg-white/20 btn-hover" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+                            Loja Virtual
+                        </a>
+</div> -->
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-slate-100 pt-24 pb-12">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 pb-16 border-b border-slate-100">
+<div class="col-span-1 lg:col-span-2 space-y-8">
+<div class="flex items-center gap-4 ">
+<!-- <img alt="Formulapluspet" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWAtdt6303B-0XQfOnCyrU--aYp2d8OkexRMTGsLlU4OpGfEvN8UutQd4sYTodVKPKB5iooEXyzfA_i0jOihve6E4QFChj5FqfO7EKlpZYVQQwjB-Y5uySmFk_hFdDXAA-ZgjOZNUshSslrpE8UI8m01lnBilyHoSlpKyMFqfozP_T_u8rsgl4_R5Q05VFv3KLBynXrin7AA_A7XolKqifOSZi1bss6i0-VG5jsl_LPv9pM6ytD3CDQeU81e7aOxZ7xswnE1GLbSy7"> -->
+<!-- <span class="text-2xl font-extrabold text-primary tracking-tight">Formulapluspet</span> -->
+</div>
+<!-- <p class="text-on-surface-variant max-w-md text-lg leading-relaxed">
+                    Vital Pet Compounding: Referência em manipulação magistral veterinária, unindo ciência e amor para garantir a longevidade dos animais.
+                </p> -->
+<div class="flex gap-4">
+<!-- <a class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">share</span></a> -->
+<!-- <a class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">mail</span></a> -->
+</div>
+</div>
+<!-- <div>
+<h5 class="text-primary font-bold text-xl mb-8">Navegação</h5>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:text-secondary font-medium transition-colors" href="#solucoes">Soluções Técnicas</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary font-medium transition-colors" href="#como-funciona">Processo</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary font-medium transition-colors" href="#formas-farmaceuticas">Formas Farmacêuticas</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary font-medium transition-colors" href="#faq">Dúvidas</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-primary font-bold text-xl mb-8">Legal</h5>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:text-secondary font-medium transition-colors" href="#">Privacidade</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary font-medium transition-colors" href="#">Termos de Uso</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary font-medium transition-colors" href="#">Responsabilidade</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary font-medium transition-colors" href="#">Trabalhe Conosco</a></li>
+</ul>
+</div> -->
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 py-12">
+<p class="text-sm font-semibold text-slate-400">
+                © 2026 Formulapluspet - Vital Pet Compounding. Todos os direitos reservados.
+            </p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-green-500 rounded-full"></span>
+<span class="text-sm font-bold text-slate-600">Sistema Operacional Online</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Floating Button -->
+<a class="fixed bottom-10 right-10 bg-[#25D366] text-white p-5 rounded-full shadow-[0_20px_50px_rgba(37,211,102,0.3)] z-40 btn-hover group flex items-center gap-3 overflow-hidden max-w-[68px] hover:max-w-[280px] transition-all duration-700" href="https://wa.me/yournumber">
+<svg class="w-8 h-8 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-2.315 0-4.191 1.876-4.191 4.191 0 .743.2 1.47.578 2.092l-.611 2.229 2.279-.598c.601.328 1.274.502 1.957.502a4.192 4.192 0 0 0 4.191-4.191c0-2.315-1.877-4.191-4.195-4.191zm2.393 5.923c-.1.278-.579.545-.809.58-.23.035-.512.062-1.392-.285-.92-.363-1.508-1.296-1.554-1.358-.046-.062-.376-.502-.376-.967 0-.465.244-.693.332-.786.088-.093.19-.116.254-.116.064 0 .126.001.181.004.058.003.135-.023.21.159.078.188.268.654.292.704.024.05.04.108.008.173-.032.065-.048.106-.096.162-.048.056-.1.125-.143.167-.048.046-.098.096-.042.192.056.096.248.408.533.66.365.325.674.426.77.471.096.046.153.039.21-.026.056-.065.244-.285.31-.383.065-.097.13-.081.218-.048.089.033.565.267.662.316.097.049.162.073.186.113.024.04.024.23-.076.508zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"></path></svg>
+<span class="whitespace-nowrap font-extrabold pr-4 text-lg">Suporte Vital WhatsApp</span>
+</a>
+<script>
+    // Header scroll transparency effect
+    // window.addEventListener('scroll', () => {
+    //     const header = document.querySelector('header');
+    //     if (window.scrollY > 20) {
+    //         header.classList.add('shadow-xl', 'shadow-slate-200/50', 'bg-white/95');
+    //     } else {
+    //         header.classList.remove('shadow-xl', 'shadow-slate-200/50', 'bg-white/95');
+    //     }
+    // });
+
+    // Smooth reveal for details
+    document.querySelectorAll('details').forEach((el) => {
+        el.addEventListener('toggle', (e) => {
+            if (el.open) {
+                el.classList.add('ring-2', 'ring-secondary/20', 'border-secondary/30');
+            } else {
+                el.classList.remove('ring-2', 'ring-secondary/20', 'border-secondary/30');
+            }
+        });
+    });
+</script>
+
+
+</body></html>
